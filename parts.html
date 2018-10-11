@@ -1,10 +1,121 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>parts</title>
+	<title>Parts:The.Gathering</title>
+	<script src="processing.js"></script>
+	<link rel="stylesheet" type="text/css" href="parts.css">
 </head>
 <body>
-	ただいまの同時アクセス数
+	<p>ただいまの総PV数</p>
+
+
+	<script type="application/processing" class="mainWindow">
+	float sx[]=new float[700];
+float sy[]=new float[700];
+float becx[]=new float[700];
+float becy[]=new float[700];
+float scalex[]=new float[700];
+float scaley[]=new float[700];
+float col[]=new float[700];
+
+
+
+
+
+void setup(){
+  size(800,1000);
+  background(0);
+  rectMode(CENTER);
+  noStroke();
+  
+  for(int i=0;i<700;i++){
+    sx[i]=random(width);
+    sy[i]=random(height);
+    becx[i]=0;
+    becy[i]=0;
+    scalex[i]=random(20,60);
+    scaley[i]=random(20,60);
+    col[i]=random(-10,10);
+  }
+}
+
+void draw(){
+  background(0);
+  stripDisp();
+  smash();
+}
+
+void stripDisp(){
+  for(int i=0;i<700;i++){
+    fill(90+col[i],80+col[i],32+col[i],240);
+    rect(sx[i],sy[i],scalex[i],scaley[i],4);
+    sx[i]+=becx[i];
+    sy[i]+=becy[i];
+    
+    if(becx[i]>0){
+      becx[i]--;
+    }else if(becx[i]<0){
+      becx[i]++;
+    }
+    if(becy[i]>0){
+      becy[i]--;
+    }else if(becy[i]<0){
+      becy[i]++;
+    }
+    
+    if(dist(sx[i],sy[i],mouseX,mouseY)<60){
+      
+      becx[i]+=int(random(-7,8));
+      becy[i]+=int(random(-7,8));    
+  }
+  }
+  
+}
+
+void smash(){
+  if(mousePressed==true){
+  for(int i=0;i<700;i++){
+     if(dist(sx[i],sy[i],mouseX,mouseY)<150){
+      
+      becx[i]+=int(random(-20,21));
+      becy[i]+=int(random(-20,21));    
+  }
+  }
+  }
+  
+}
+
+void keyPressed(){  
+  if(key=='r'){
+    for(int i=0;i<700;i++){
+      if(sx[i]>400){
+        becx[i]+=int(random(-30,-10));
+      }else if(sx[i]<=400){
+        becx[i]+=int(random(10,30));
+      }
+      
+      if(sy[i]>400){
+        becy[i]+=int(random(-30,-10));
+      }else if(sy[i]<=400){
+        becy[i]+=int(random(10,30));
+      }
+    }
+  }
+}
+</script>
+      <canvas class="canvas"></canvas>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+
 
 </body>
 </html>
