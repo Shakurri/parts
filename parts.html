@@ -9,6 +9,13 @@
 <body>
 
 
+<button id="auth-button" hidden>認証ボタン</button><br />
+<textarea cols="80" rows="20" id="query-output"></textarea>
+ 
+<script src="parts.js"></script>
+<script src="https://apis.google.com/js/client.js?onload=authorize"></script>
+
+
 	<script type="application/processing" class="mainWindow">
 	float sx[]=new float[700];
 float sy[]=new float[700];
