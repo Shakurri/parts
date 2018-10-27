@@ -1,6 +1,6 @@
 
 /* @pjs preload="part1.png,part2.png,part3.png,part4.png,part5.png,part6.png,part7.png,part8.png,part9.png"; */ 
-int num=21;
+int num=43;
   float sx[]=new float[num];
 float sy[]=new float[num];
 float becx[]=new float[num];
