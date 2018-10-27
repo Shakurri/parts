@@ -29,5 +29,6 @@ p{
 }
 
 canvas{
+	position: fixed;
 	z-index: 5;
 }
