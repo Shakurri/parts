@@ -1,6 +1,6 @@
 
 /* @pjs preload="part1.png,part2.png,part3.png,part4.png,part5.png,part6.png,part7.png,part8.png,part9.png"; */ 
-int num=100;
+int num=13;
   float sx[]=new float[num];
 float sy[]=new float[num];
 float becx[]=new float[num];
@@ -108,7 +108,7 @@ void stripDisp(){
       becy[i]++;
     }
     
-    if(dist(sx[i],sy[i],mouseX,mouseY)<60){
+    if(dist(sx[i],sy[i],touchX,touchY)<100){
       
       becx[i]+=int(random(-7,8));
       becy[i]+=int(random(-7,8));    
@@ -118,9 +118,9 @@ void stripDisp(){
 }
 
 void smash(){
-  if(mouseClicked==true){
+  if(touchMoved==true){
   for(int i=0;i<num;i++){
-     if(dist(sx[i],sy[i],mouseX,mouseY)<150){
+     if(dist(sx[i],sy[i],touchX,touchY)<150){
       
       becx[i]+=int(random(-20,21));
       becy[i]+=int(random(-20,21));    
