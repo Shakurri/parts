@@ -107,14 +107,14 @@ void stripDisp(){
       becy[i]++;
     }
 
-    becx[i]+=int(random(-2,2));
-    becy[i]+=int(random(-2,2));    
+    becx[i]+=int(random(-5,6));
+    becy[i]+=int(random(-5,6));    
 
     
     if(dist(sx[i],sy[i],mouseX,mouseY)<150){
       
-      becx[i]+=int(random(-20,21));
-      becy[i]+=int(random(-20,21));    
+      becx[i]+=int(random(-10,11));
+      becy[i]+=int(random(-10,11));    
   }
   }
   
