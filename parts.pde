@@ -106,6 +106,10 @@ void stripDisp(){
     }else if(becy[i]<0){
       becy[i]++;
     }
+
+    becx[i]+=int(random(-2,2));
+    becy[i]+=int(random(-2,2));    
+
     
     if(dist(sx[i],sy[i],mouseX,mouseY)<150){
       
