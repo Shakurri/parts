@@ -27,7 +27,6 @@ int parts[]=new int[num];
 
 void setup(){
   size(innerWidth,innerHeight);
-  background(100);
   rectMode(CENTER);
   noStroke();
   imageMode(CENTER);
@@ -107,14 +106,14 @@ void stripDisp(){
       becy[i]++;
     }
 
-    becx[i]+=int(random(-5,6));
-    becy[i]+=int(random(-5,6));    
+    becx[i]+=int(random(-2,2));
+    becy[i]+=int(random(-2,2));    
 
     
     if(dist(sx[i],sy[i],mouseX,mouseY)<150){
       
-      becx[i]+=int(random(-10,11));
-      becy[i]+=int(random(-10,11));    
+      becx[i]+=int(random(-6,6));
+      becy[i]+=int(random(-6,6));    
   }
   }
   
