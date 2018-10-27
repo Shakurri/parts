@@ -112,8 +112,8 @@ void stripDisp(){
     
     if(dist(sx[i],sy[i],mouseX,mouseY)<150){
       
-      becx[i]+=int(random(-6,6));
-      becy[i]+=int(random(-6,6));    
+      becx[i]+=int(random(-9,9));
+      becy[i]+=int(random(-9,9));    
   }
   }
   
