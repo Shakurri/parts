@@ -1,6 +1,6 @@
 
 /* @pjs preload="part1.png,part2.png,part3.png,part4.png,part5.png,part6.png,part7.png,part8.png,part9.png"; */ 
-int num=13;
+int num=21;
   float sx[]=new float[num];
 float sy[]=new float[num];
 float becx[]=new float[num];
@@ -58,7 +58,6 @@ void setup(){
 void draw(){
   background(0);
   stripDisp();
-  smash();
 }
 
 void stripDisp(){
@@ -108,42 +107,15 @@ void stripDisp(){
       becy[i]++;
     }
     
-    if(dist(sx[i],sy[i],touchX,touchY)<100){
-      
-      becx[i]+=int(random(-7,8));
-      becy[i]+=int(random(-7,8));    
-  }
-  }
-  
-}
-
-void smash(){
-  if(touchMoved==true){
-  for(int i=0;i<num;i++){
-     if(dist(sx[i],sy[i],touchX,touchY)<150){
+    if(dist(sx[i],sy[i],mouseX,mouseY)<150){
       
       becx[i]+=int(random(-20,21));
       becy[i]+=int(random(-20,21));    
   }
   }
-  }
   
 }
 
-void keyPressed(){  
-  if(key=='r'){
-    for(int i=0;i<num;i++){
-      if(sx[i]>400){
-        becx[i]+=int(random(-30,-10));
-      }else if(sx[i]<=400){
-        becx[i]+=int(random(10,30));
-      }
-      
-      if(sy[i]>400){
-        becy[i]+=int(random(-30,-10));
-      }else if(sy[i]<=400){
-        becy[i]+=int(random(10,30));
-      }
-    }
-  }
-}
+
+
+
