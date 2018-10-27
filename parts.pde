@@ -48,8 +48,8 @@ void setup(){
     sy[i]=random(height);
     becx[i]=0;
     becy[i]=0;
-    scalex[i]=random(50,90);
-    scaley[i]=random(50,90);
+    scalex[i]=random(90,150);
+    scaley[i]=random(90,150);
     part[i]=random(1,10);
     parts[i]=int(part[i]);
   }

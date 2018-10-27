@@ -1,12 +1,29 @@
 body{
 	background-color: grey;
+	font-family: 'Impact';
 }
 
 p{
 	color:white;
+	opacity:0.5;
 }
 
-.canvas{
-	width:100vw;
-	height:100vh;
+.textBox{
+	width:90%;
+	position:fixed;
+	margin-top: 10vh;
+	margin-left :5%;
+}
+
+.title{
+	font-size:21vw;
+}
+
+.caption{
+	font-size: 6vw;
+}
+
+.num{
+	color: olive;
+	font-size: 10vw;
 }
